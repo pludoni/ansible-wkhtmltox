@@ -8,11 +8,10 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - role: zealot128.wkthmltox
+         - role: pludoni.wkthmltox
            wkhtmltox_install_fonts: true
            wkhtmltox_main_version: 0.12.2-dev
            wkhtmltox_minor_version: 0.12.2-dev-5dea253
-           wkhtmltox_download_url: 'http://downloads.sourceforge.net/project/wkhtmltopdf/{{wkhtmltopdf_main_version}}/wkhtmltox-{{wkhtmltopdf_minor_v
 
 License
 -------
