@@ -1,13 +1,12 @@
 ---
-- get_url:
-    url: '{{wkhtmltox_download_url}}'
-    dest: /root/wkhtmltox-{{wkhtmltox_minor_version}}.deb
-  name: 'Wkhtmltox | download {{wkhtmltox_download_url}}'
-- apt:
-    deb: /root/wkhtmltox-{{wkhtmltox_minor_version}}.deb
-  name: 'Wkhtmltox | Install deb'
+# Doesnt work anymore, wkhtml don't provide debs for new versions
+- include: 'deb.yml'
+  when: false
+- include: 'static.yml'
 - apt: pkg=xvfb
-  name: 'Install Xvfb'
+  name: 'Wkhtmltox | Install Xvfb'
 - include: 'font.yml'
   when: '{{wkhtmltox_install_fonts}}'
+
+
 

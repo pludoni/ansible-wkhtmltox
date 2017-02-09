@@ -1,0 +1,24 @@
+- get_url:
+    dest: /tmp/wkhtmltox.tar.xz
+    url: "{{wkhtmltox_download_url}}"
+  name: "Wkhtmltox | Download static build from gna.org"
+- file:
+    dest: /tmp/wkhtmltox
+    state: directory
+  name: "Wkhtmltox | create extraction wrapper dir"
+- unarchive:
+    src: /tmp/wkhtmltox.tar.xz
+    dest: "/tmp/wkhtmltox"
+    creates: /tmp/wkhtmltox/wkhtmltox/bin/wkhtmltopdf
+  name: "Wkhtmltox | Unzip"
+- copy:
+    src: "/tmp/wkhtmltox/wkhtmltox/{{item}}"
+    dest: "/usr/local/{{item}}"
+    mode: 0755
+    remote_src: true
+  name: "Wkhtmltox | Copy binaries over"
+  with_items:
+    - bin/wkhtmltopdf
+    - bin/wkhtmltoimage
+
+

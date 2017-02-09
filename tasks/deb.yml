@@ -1,0 +1,8 @@
+- get_url:
+    url: '{{wkhtmltox_download_url}}'
+    dest: /root/wkhtmltox-{{wkhtmltox_minor_version}}.deb
+  name: 'Wkhtmltox | download {{wkhtmltox_download_url}}'
+- apt:
+    deb: /root/wkhtmltox-{{wkhtmltox_minor_version}}.deb
+  name: 'Wkhtmltox | Install deb'
+
