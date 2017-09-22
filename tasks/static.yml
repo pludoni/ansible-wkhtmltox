@@ -10,6 +10,7 @@
     src: /tmp/wkhtmltox.tar.xz
     dest: "/tmp/wkhtmltox"
     creates: /tmp/wkhtmltox/wkhtmltox/bin/wkhtmltopdf
+    remote_src: yes
   name: "Wkhtmltox | Unzip"
 - copy:
     src: "/tmp/wkhtmltox/wkhtmltox/{{item}}"

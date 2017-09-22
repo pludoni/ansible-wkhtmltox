@@ -3,6 +3,7 @@
 - include: 'deb.yml'
   when: false
 - include: 'static.yml'
+
 - apt: pkg=xvfb
   name: 'Wkhtmltox | Install Xvfb'
 - include: 'font.yml'

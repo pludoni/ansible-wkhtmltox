@@ -4,4 +4,4 @@ wkhtmltox_base_version: 0.12
 wkhtmltox_main_version: 0.12.4
 wkhtmltox_minor_version: 0.12.4
 
-wkhtmltox_download_url: 'http://download.gna.org/wkhtmltopdf/{{wkhtmltox_base_version}}/{{wkhtmltox_main_version}}/wkhtmltox-{{wkhtmltox_minor_version}}_linux-generic-amd64.tar.xz'
+wkhtmltox_download_url: "https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/{{wkhtmltox_main_version}}/wkhtmltox-{{wkhtmltox_main_version}}_linux-generic-amd64.tar.xz"
