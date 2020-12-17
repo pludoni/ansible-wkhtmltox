@@ -1,13 +1,12 @@
 - apt:
-    pkg: "{{item}}"
+    pkg:
+      - libfreetype6
+      - libfreetype6-dev
+      - libfontconfig
+      - libx11-dev
+      - libxrender-dev
+      - zlib1g-dev
   name: 'Wkhtmltox | Fonts | install packages'
-  with_items:
-    - libfreetype6
-    - libfreetype6-dev
-    - libfontconfig
-    - libx11-dev
-    - libxrender-dev
-    - zlib1g-dev
 
 - shell: 'echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections'
   name: 'Wkhtmltox | Fonts | Accept MScorefonts EULA'
